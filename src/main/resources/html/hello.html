@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script src="../js/hello.js"></script>
+<style >
+    .tabsBox{
+        border: 1px black solid;
+    }
+
+    li{
+        list-style: none;
+        display: inline;
+    }
+
+    .content{
+        border: 1px red solid;
+    }
+    .addSign{
+        border: 1px green solid;
+    }
+    .firstNav{
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+<body>
+<div class="tabsBox" id="tabsBox">
+    <!-- tab栏-->
+    <nav class="firstNav" >
+        <ul>
+            <li><span>测试</span></li>
+            <li><span>测试1</span></li>
+            <li><span>测试2</span></li>
+        </ul>
+
+        <!--  最右边的加号-->
+        <div class="addSign">
+            <span>+</span>
+        </div>
+    </nav>
+
+
+    <div class="content">
+        <section class="con-active">测试1</section>
+        <section>测试2</section>
+        <section>测试3</section>
+    </div>
+</div>
+
+</body>
+
+</html>

@@ -42,12 +42,9 @@ public class NIOserver {
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
         serverSocketChannel.configureBlocking(false);
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
-
         ServerSocket serverSocket = serverSocketChannel.socket();
-
         InetSocketAddress inetSocketAddress = new InetSocketAddress("localhost",8888);
         serverSocket.bind(inetSocketAddress);
-
         selector.select();
         Set<SelectionKey> selectionKeys = selector.selectedKeys();
         Iterator<SelectionKey> selectionKeyIterator = selectionKeys.iterator();

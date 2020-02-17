@@ -20,4 +20,27 @@ public abstract class Animal {
     public void setMoney(int money) {
         this.money = money;
     }
+
+    @Override
+    public boolean equals(Object another) {
+        if (this==another){
+            return true;
+        }
+        if (another instanceof Animal){
+            Animal anotherAnimal = (Animal) another;
+            if (this.getName()!=null
+                    &&(anotherAnimal).getName()!=null
+                    && this.getName().equals(anotherAnimal.getName())){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode();
+    }
 }
